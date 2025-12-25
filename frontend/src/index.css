@@ -12,6 +12,10 @@ code {
     monospace;
 }
 
-.Footer-text-color {
-  color: white;
+.hero-section-text {
+  color: white !important;
+} 
+
+.customer-btn-color {
+  background-color: #2E8BC0 !important;
 }

@@ -11,7 +11,7 @@ function Navbar() {
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 
                 <form>
-                    <ul class="navbar-nav  mb-lg-0 ml-5">
+                    <ul class="navbar-nav  mb-lg-0 ">
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="#">Home</a>
                         </li>
@@ -27,7 +27,7 @@ function Navbar() {
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="#">Contact</a>
                         </li>
-                        <button type="button" class="btn btn-primary">Book Pickup</button>
+                        <button type="button" class="btn btn-primary customer-btn-color">Book Pickup</button>
                     </ul>
                     
                 </form>
