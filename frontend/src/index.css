@@ -19,3 +19,28 @@ code {
 .customer-btn-color {
   background-color: #2E8BC0 !important;
 }
+
+#HomeChoose {
+  padding-top: 5rem;
+  padding-bottom: 3rem;
+  background-color: #2E8BC0 !important;
+  color: white;
+}
+
+#NavLogo {
+  color: #2E8BC0;
+  font-weight: 600;
+}
+
+#HeroService {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  background-color: #2E8BC0 !important;
+  color: white;
+}
+
+#ServiceTypes {
+  display: flex;
+  flex-wrap: wrap;
+  
+}

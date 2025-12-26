@@ -1,19 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
+import HomePage from './landingPage/home/HomePage';
+import ServicePage from './landingPage/Services/ServicePage';
 
-import Navbar from './landingPage/Navbar';
-import Footer from './landingPage/Footer';
-import Hero from './landingPage/home/Hero';
-import Choose from './landingPage/home/Choose';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Navbar />
-    <Hero/>
-    <Choose/>
-    <Footer/>
+    <ServicePage/>
   </React.StrictMode>
 );
 

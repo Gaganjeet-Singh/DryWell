@@ -4,7 +4,7 @@ function Navbar() {
     return ( 
         <nav class="navbar navbar-expand-lg border-bottom">
             <div class="container p-2">
-                <a class="navbar-brand" href="#">DryWELL</a>
+                <a class="navbar-brand" href="#" id = "NavLogo">DryWELL</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
                 </button>

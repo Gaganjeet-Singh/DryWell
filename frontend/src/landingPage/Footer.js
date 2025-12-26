@@ -4,7 +4,7 @@ function Footer() {
     return ( 
         <footer style = {{backgroundColor : "#F4F7FA"}}>
             <div className='container '>
-                <div className='row mt-5 mb-4 p-5 border-bottom'>
+                <div className='row  mb-4 p-5 border-bottom'>
                     <div className='col-3'>
                         <h4 style = {{color:"#2E2E2E"}}>DryWELL Laundry</h4>
                         <p style = {{color:"#2E2E2E"}}>Professional laundry and dry-cleaning service. Clean clothes, fresh start.</p>
@@ -30,7 +30,7 @@ function Footer() {
                         <p style = {{color:"#2E2E2E"}}><i class="fa fa-map-marker" aria-hidden="true"></i>123 Clean Street, Fresh City, FC 12345</p>
                     </div>
                 </div>
-                <div className='row mt-3 mb-5 text-center'>
+                <div className='row mt-3  text-center'>
                     <p style = {{color:"#2E2E2E"}}>© 2025 DryWELL Laundry. All rights reserved.</p>
                 </div>
             </div>
