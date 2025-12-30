@@ -3,6 +3,7 @@ import Navbar from '../Navbar';
 import Footer from '../Footer'
 import Hero from './Hero';
 import Value from './Value';
+import Team from './Team';
 
 function AboutPage() {
     return ( 
@@ -10,6 +11,7 @@ function AboutPage() {
             <Navbar/>
             <Hero/>
             <Value/>
+            <Team/>
             <Footer/>
         </>
      );

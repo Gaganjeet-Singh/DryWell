@@ -93,26 +93,30 @@ function Types() {
 
         </div>
       </div>
-      {/* 🔴 CONTAINER CLOSED HERE */}
-
       <section className="cta-section">
         <div className="container">
-          <div className="cta-content text-center">
-            <h6 className="cta-subtitle">CLEAN CLOTHES, FRESH START</h6>
+            <div className="cta-content text-center">
+
+            <div className="cta-icon mb-3">
+                <i className="fa fa-magic"></i>
+            </div>
+
+            <h6 className="cta-subtitle">Join the DryWELL Family</h6>
 
             <p className="cta-text">
-              Professional laundry and dry-cleaning service with free pickup and delivery.
-              <br />
-              Experience the convenience of pristine clothes delivered to your door.
+                Experience the convenience of professional laundry service with a personal touch.
             </p>
 
             <div className="d-flex justify-content-center gap-3 mt-4">
-              <button className="cta-btn-light">Contact Us</button>
-              <button className="cta-btn-light">View Pricing</button>
+                <button className="cta-btn-primary">Schedule Pickup</button>
+                <button className="cta-btn-outline">Contact Us</button>
             </div>
-          </div>
+
+            </div>
         </div>
-      </section>
+        </section>
+
+
     </>
   );
 }
