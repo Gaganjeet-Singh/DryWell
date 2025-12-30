@@ -39,8 +39,141 @@ code {
   color: white;
 }
 
-#ServiceTypes {
+
+
+
+.service-card-img {
+  height: 200px;
+  object-fit: cover;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.service-card {
+  width: 20rem;
+}
+
+.service-card-img {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.service-btn {
+  background-color: #2E8BC0;
+  border: none;
+}
+
+.service-btn:hover {
+  background-color: #1f6f9c;
+}
+
+/* FULL WIDTH BLUE BACKGROUND */
+.cta-section {
+  background: #2E8BC0;
+  padding: 80px 0;
+  color: white;
+}
+
+/* CENTERED CONTENT */
+.cta-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* TEXT */
+.cta-subtitle {
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+}
+
+.cta-text {
+  font-size: 18px;
+  line-height: 1.7;
+  margin-bottom: 30px;
+}
+
+/* BUTTONS */
+.cta-btn-light {
+  background-color: #f1f3f5;
+  color: #000;
+  padding: 12px 32px;
+  border-radius: 30px;
+  font-weight: 500;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.cta-btn-light:hover {
+  background-color: #e4e6e9;
+}
+
+.story-image {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+}
+
+
+.values-section {
+  padding: 80px 0;
+  background-color: #ffffff;
+}
+
+.values-title {
+  color: #2E8BC0;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.values-subtitle {
+  color: #555;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Card */
+.value-card {
+  border: 2px solid rgba(46, 139, 192, 0.35);
+  border-radius: 22px;
+  padding: 35px 25px;
+  height: 100%;
+  transition: all 0.3s ease;
+  background: #fff;
+}
+
+.value-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(46, 139, 192, 0.15);
+}
+
+/* Icon */
+.icon-box {
+  width: 70px;
+  height: 70px;
+  background-color: rgba(46, 139, 192, 0.15);
+  border-radius: 18px;
   display: flex;
-  flex-wrap: wrap;
-  
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  color: #2E8BC0;
+  font-size: 28px;
+}
+
+.value-card h6 {
+  color: #2E8BC0;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.value-card p {
+  color: #555;
+  font-size: 15px;
+  line-height: 1.6;
 }
