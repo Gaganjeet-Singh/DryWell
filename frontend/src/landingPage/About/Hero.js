@@ -1,6 +1,12 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 function Hero() {
+    const navigate = useNavigate();
+
+    const goToService = () => {
+        navigate('/service');
+    }
     return (
         <>
         <section id ="HeroService">
@@ -23,7 +29,7 @@ function Hero() {
                         Today, we're proud to serve thousands of customers across the city, providing professional laundry and dry-cleaning services with free pickup and delivery. But our mission hasn't changed - we're still dedicated to making your life easier while treating your clothes with the utmost care.
                         What sets us apart is our commitment to sustainability. We use eco-friendly detergents, energy-efficient machines, and biodegradable packaging. Because we believe clean clothes shouldn't come at the cost of a clean planet.
                     </p>
-                    <button type="button" class="btn btn-primary customer-btn-color ">Explore Our Services</button>
+                    <button type="button" class="btn btn-primary customer-btn-color " onClick={goToService}>Explore Our Services</button>
                 </div>
             </div>
         </div>

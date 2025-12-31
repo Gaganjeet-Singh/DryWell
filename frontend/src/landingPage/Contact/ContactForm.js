@@ -39,7 +39,7 @@ function ContactForm() {
               />
             </div>
 
-            <button className="btn btn-primary w-100 mt-3">
+            <button className="btn btn-primary w-100 mt-3" style={{backgroundColor:"#2E8BC0"}}>
               Send Message
             </button>
           </div>
@@ -53,7 +53,7 @@ function ContactForm() {
                     <div class="content">
                         <h5 class="title">Phone</h5>
                         <p class="subtitle">Call us anytime during business hours</p>
-                        <a href="tel:+15551234567" class="phone-number">+1 (555) 123-4567</a>
+                        <a href="tel:+15551234567" class="phone-number" style={{color:"#2E8BC0"}}>+1 (555) 123-4567</a>
                     </div>
                 </div>
                 <div class="contact-card mt-3">
@@ -63,7 +63,7 @@ function ContactForm() {
                     <div class="content">
                         <h5 class="title">Email</h5>
                         <p class="subtitle">Send us an email anytime</p>
-                        <a href="tel:+15551234567" class="phone-number">hello@drywel.com</a>
+                        <a href="tel:+15551234567" class="phone-number" style={{color:"#2E8BC0"}}>hello@drywell.com</a>
                     </div>
                 </div>
                 <div class="business-card mt-3">

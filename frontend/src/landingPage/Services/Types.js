@@ -1,6 +1,12 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 function Types() {
+  const navigate = useNavigate();
+
+  const gotoContact = () => {
+    navigate('/contact');
+  }
   return (
     <>
       {/* ================= SERVICES SECTION ================= */}
@@ -109,7 +115,7 @@ function Types() {
 
             <div className="d-flex justify-content-center gap-3 mt-4">
                 <button className="cta-btn-primary">Schedule Pickup</button>
-                <button className="cta-btn-outline">Contact Us</button>
+                <button className="cta-btn-outline" onClick={gotoContact}>Contact Us</button>
             </div>
 
             </div>
