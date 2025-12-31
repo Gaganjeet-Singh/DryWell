@@ -1,10 +1,13 @@
 import React from "react";
 
+
 function Team() {
+ 
   return (
     <>
       <section className="team-section">
         <div className="container">
+          
           
           {/* Heading */}
           <div className="row text-center mb-5">

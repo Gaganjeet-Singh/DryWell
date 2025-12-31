@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 
 function Navbar() {
     return ( 
@@ -13,19 +14,19 @@ function Navbar() {
                 <form>
                     <ul class="navbar-nav  mb-lg-0 ">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                            <Link class="nav-link active" aria-current="page" to = '/'>Home</Link>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" href="#">Service</a>
+                            <Link class="nav-link active" to = '/service'>Service</Link>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="#">Pricing</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">About</a>
+                            <Link class="nav-link active" aria-current="page" to ='/about'>About</Link>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Contact</a>
+                            <Link class="nav-link active" aria-current="page" to = "/contact">Contact</Link>
                         </li>
                         <button type="button" class="btn btn-primary customer-btn-color">Book Pickup</button>
                     </ul>
