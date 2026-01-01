@@ -4,6 +4,7 @@ import Footer from '../Footer';
 import Hero from './Hero';
 import Choose from './Choose';
 import Pickup from './Pickup';
+import Working from './Working';
 
 function HomePage() {
     return (
@@ -11,6 +12,7 @@ function HomePage() {
             <Navbar />
             <Hero />
             <Choose />
+            <Working/>
             <Pickup />
             <Footer />
         </>

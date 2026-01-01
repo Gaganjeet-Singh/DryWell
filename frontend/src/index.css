@@ -501,3 +501,106 @@ code {
 .footer-link:hover {
   text-decoration: underline;
 }
+
+.icon-circle {
+  width: 70px;
+  height: 70px;
+  background-color: rgba(46, 139, 192, 0.12);
+  color: #2E8BC0;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+/* SECTION */
+.working-timeline {
+  background-color: #ffffff;
+}
+
+/* TITLE */
+.timeline-title {
+  color: #2E8BC0;
+  font-weight: 600;
+}
+
+/* TIMELINE CONTAINER */
+.timeline {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* STEP */
+.timeline-step {
+  position: relative;
+  display: grid;
+  grid-template-columns: 50px 1fr 40px;
+  align-items: flex-start;
+  column-gap: 20px;
+  padding: 25px 0;
+}
+
+/* VERTICAL LINE */
+.timeline-step::before {
+  content: "";
+  position: absolute;
+  left: 18px;          /* ✅ perfectly centered */
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background-color: rgba(46, 139, 192, 0.25);
+}
+
+.timeline-step:last-child::before {
+  bottom: 50%;
+}
+
+
+/* STEP NUMBER */
+.step-number {
+  width: 36px;
+  height: 36px;
+  background-color: #2E8BC0;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+/* CONTENT */
+.step-content h5 {
+  margin-bottom: 6px;
+}
+
+/* ICON (RIGHT SIDE) */
+.step-icon {
+  color: #2E8BC0;
+  font-size: 22px;
+  opacity: 0.85;
+  margin-top: 4px;
+}
+
+/* CTA BUTTON */
+.timeline-btn {
+  background-color: #2E8BC0;
+  color: #fff;
+  padding: 12px 34px;
+  border-radius: 30px;
+  border: none;
+}
+
+/* ---------------- MOBILE FIX ---------------- */
+@media (max-width: 768px) {
+  .timeline-step {
+    grid-template-columns: 50px 1fr;
+  }
+
+  .step-icon {
+    display: none;
+  }
+}
