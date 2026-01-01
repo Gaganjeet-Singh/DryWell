@@ -7,6 +7,10 @@ function Types() {
   const gotoContact = () => {
     navigate('/contact');
   }
+
+  const goToBooking = () => {
+    navigate('/booking');
+  }
   return (
     <>
       {/* ================= SERVICES SECTION ================= */}
@@ -22,7 +26,7 @@ function Types() {
                 <p className="card-text">
                   Specialized dry cleaning for delicate and premium garments using fabric-safe solvents.
                 </p>
-                <button className="btn btn-primary mt-auto service-btn">Book This Service</button>
+                <button className="btn btn-primary mt-auto service-btn" onClick={goToBooking}>Book This Service</button>
               </div>
             </div>
           </div>
@@ -36,7 +40,7 @@ function Types() {
                 <p className="card-text">
                   Your everyday laundry washed, dried, and neatly folded.
                 </p>
-                <button className="btn btn-primary mt-auto service-btn">Book This Service</button>
+                <button className="btn btn-primary mt-auto service-btn" onClick={goToBooking}>Book This Service</button>
               </div>
             </div>
           </div>
@@ -50,7 +54,7 @@ function Types() {
                 <p className="card-text">
                   Crisp, perfectly pressed clothes ready to wear.
                 </p>
-                <button className="btn btn-primary mt-auto service-btn">Book This Service</button>
+                <button className="btn btn-primary mt-auto service-btn" onClick={goToBooking}>Book This Service</button>
               </div>
             </div>
           </div>
@@ -64,7 +68,7 @@ function Types() {
                 <p className="card-text">
                   Professional shoe cleaning using safe products.
                 </p>
-                <button className="btn btn-primary mt-auto service-btn">Book This Service</button>
+                <button className="btn btn-primary mt-auto service-btn" onClick={goToBooking}>Book This Service</button>
               </div>
             </div>
           </div>
@@ -78,7 +82,7 @@ function Types() {
                 <p className="card-text">
                   Deep cleaning for a fresh home.
                 </p>
-                <button className="btn btn-primary mt-auto service-btn">Book This Service</button>
+                <button className="btn btn-primary mt-auto service-btn" onClick={goToBooking}>Book This Service</button>
               </div>
             </div>
           </div>
@@ -92,7 +96,7 @@ function Types() {
                 <p className="card-text">
                   Deep cleaning for curtains and blankets.
                 </p>
-                <button className="btn btn-primary mt-auto service-btn">Book This Service</button>
+                <button className="btn btn-primary mt-auto service-btn" onClick={goToBooking}>Book This Service</button>
               </div>
             </div>
           </div>
@@ -114,7 +118,7 @@ function Types() {
             </p>
 
             <div className="d-flex justify-content-center gap-3 mt-4">
-                <button className="cta-btn-primary">Schedule Pickup</button>
+                <button className="cta-btn-primary" onClick={goToBooking}>Schedule Pickup</button>
                 <button className="cta-btn-outline" onClick={gotoContact}>Contact Us</button>
             </div>
 

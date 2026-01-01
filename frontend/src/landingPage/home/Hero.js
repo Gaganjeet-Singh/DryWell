@@ -1,6 +1,12 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 function Hero() {
+    const navigate = useNavigate();
+
+    const goToBooking = () => {
+        navigate('/booking');
+    }
     return ( 
         <section style={{backgroundColor:"#2E8BC0",height:"60vh", alignItems:"center", justifyContent:"center",color:"whilte"}}>
             <div className='container p-3' >
@@ -8,7 +14,7 @@ function Hero() {
                     <div className='col-7 col-sm-12' >
                         <h6 className='mt-5 hero-section-text'>Clean Clothes, Fresh Start</h6>
                         <p className='mt-3 hero-section-text'>Professional laundry and dry-cleaning service with free pickup and delivery.<br/>Experience the convenience of pristine clothes delivered to your door.</p>
-                        <button type="button" class="btn btn-light mt-2">Book Pickup Now</button>
+                        <button type="button" class="btn btn-light mt-2" onClick={goToBooking}>Book Pickup Now</button>
                     </div>
                     <div className='col-5'></div>
                 </div>

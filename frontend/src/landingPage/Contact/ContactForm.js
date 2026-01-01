@@ -7,35 +7,36 @@ function ContactForm() {
         <div className="row mt-4 mb-5 align-items-stretch">
 
           {/* LEFT COLUMN */}
-          <div className="col-6 contactForm p-5">
+          <div className="col-6 contactForm p-5" >
             <h5 className="mb-3">Send Us a Message</h5>
 
             <div className="mb-3">
-              <label className="form-label">Your Name *</label>
-              <input className="form-control" placeholder="John Doe" />
+              <label className="form-label" htmlfor ="username">Your Name *</label>
+              <input className="form-control" placeholder="John Doe" type="text" name= "username" />
             </div>
 
             <div className="mb-3">
-              <label className="form-label">Email Address *</label>
-              <input className="form-control" placeholder="john@example.com" />
+              <label className="form-label" htmlfor= "email">Email Address *</label>
+              <input className="form-control" placeholder="john@example.com" type = "email" name ="email"/>
             </div>
 
             <div className="mb-3">
-              <label className="form-label">Phone Number</label>
-              <input className="form-control" placeholder="+1 (555) 123-4567" />
+              <label className="form-label" htmlfor = "phone">Phone Number</label>
+              <input className="form-control" placeholder="+1 (555) 123-4567" name="phone" />
             </div>
 
             <div className="mb-3">
-              <label className="form-label">Subject *</label>
-              <input className="form-control" placeholder="How can we help you?" />
+              <label className="form-label" htmlfor = "subject">Subject *</label>
+              <input className="form-control" placeholder="How can we help you?" name= "subject" />
             </div>
 
             <div className="mb-2">
-              <label className="form-label">Message *</label>
+              <label className="form-label" htmlfor = "message">Message *</label>
               <textarea
                 className="form-control"
                 rows="5"
                 placeholder="Tell us more about your inquiry..."
+                name = "message"
               />
             </div>
 

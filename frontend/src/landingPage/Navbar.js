@@ -1,7 +1,12 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
+import {Link, useNavigate} from 'react-router-dom';
 
 function Navbar() {
+    const navigate = useNavigate();
+
+    const goToBooking = () => {
+        navigate('/booking');
+    }
     return ( 
         <nav class="navbar navbar-expand-lg border-bottom">
             <div class="container p-2">
@@ -28,7 +33,7 @@ function Navbar() {
                         <li class="nav-item">
                             <Link class="nav-link active" aria-current="page" to = "/contact">Contact</Link>
                         </li>
-                        <button type="button" class="btn btn-primary customer-btn-color">Book Pickup</button>
+                        <button type="button" class="btn btn-primary customer-btn-color" onClick={goToBooking}>Book Pickup</button>
                     </ul>
                     
                 </form>

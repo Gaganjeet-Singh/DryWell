@@ -4,6 +4,7 @@ import HomePage from './landingPage/home/HomePage';
 import AboutPage from './landingPage/About/AboutPage';
 import ServicePage from './landingPage/Services/ServicePage';
 import ContactPage from './landingPage/Contact/ContactPage';
+import BookingPage from './landingPage/booking/BookingPage';
 
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
                     <Route path = "/about" element={<AboutPage/>}/>
                     <Route path = "/service" element = {<ServicePage/>}/>
                     <Route path = "/contact" element = {<ContactPage/>}/>
+                    <Route path ='/booking' element= {<BookingPage/>}/>
                 </Routes>
             </BrowserRouter>
         </>
