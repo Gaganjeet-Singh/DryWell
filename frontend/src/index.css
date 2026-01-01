@@ -491,3 +491,13 @@ code {
   margin-top: 63px;
 }
 
+.footer-link {
+  text-decoration: none;
+  color: #0077B6;
+  display: inline-block;
+  margin-bottom: 6px;
+}
+
+.footer-link:hover {
+  text-decoration: underline;
+}
