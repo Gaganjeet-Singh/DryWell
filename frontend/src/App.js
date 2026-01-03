@@ -5,6 +5,8 @@ import AboutPage from './landingPage/About/AboutPage';
 import ServicePage from './landingPage/Services/ServicePage';
 import ContactPage from './landingPage/Contact/ContactPage';
 import BookingPage from './landingPage/booking/BookingPage';
+import SignupForm from './landingPage/Signup/SignupForm';
+import LoginForm from './landingPage/Login/LoginForm';
 
 
 function App() {
@@ -17,6 +19,8 @@ function App() {
                     <Route path = "/service" element = {<ServicePage/>}/>
                     <Route path = "/contact" element = {<ContactPage/>}/>
                     <Route path ='/booking' element= {<BookingPage/>}/>
+                    <Route path = '/signup' element = {<SignupForm/>}/>
+                    <Route path ='/login' element= {<LoginForm/>}></Route>
                 </Routes>
             </BrowserRouter>
         </>

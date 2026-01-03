@@ -1,46 +1,52 @@
 import React from 'react';
-import {Link, useNavigate} from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 function Navbar() {
-    const navigate = useNavigate();
+  const navigate = useNavigate();
 
-    const goToBooking = () => {
-        navigate('/booking');
-    }
-    return ( 
-        <nav class="navbar navbar-expand-lg border-bottom">
-            <div class="container p-2">
-                <Link class="navbar-brand" to ="/" id = "NavLogo">DryWELL</Link>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                
-                <form>
-                    <ul class="navbar-nav  mb-lg-0 ">
-                        <li class="nav-item">
-                            <Link class="nav-link active" aria-current="page" to = '/'>Home</Link>
-                        </li>
-                        <li class="nav-item">
-                            <Link class="nav-link active" to = '/service'>Service</Link>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Pricing</a>
-                        </li>
-                        <li class="nav-item">
-                            <Link class="nav-link active" aria-current="page" to ='/about'>About</Link>
-                        </li>
-                        <li class="nav-item">
-                            <Link class="nav-link active" aria-current="page" to = "/contact">Contact</Link>
-                        </li>
-                        <button type="button" class="btn btn-primary customer-btn-color" onClick={goToBooking}>Book Pickup</button>
-                    </ul>
-                    
-                </form>
-                </div>
-            </div>
-        </nav>
-     );
+  return (
+    <nav className="navbar navbar-expand-lg border-bottom bg-white">
+  <div className="container py-2">
+
+    <Link className="navbar-brand fw-bold" to="/" id="NavLogo">
+      DryWELL
+    </Link>
+
+    <button
+      className="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarContent"
+    >
+      <span className="navbar-toggler-icon"></span>
+    </button>
+
+    <div className="collapse navbar-collapse" id="navbarContent">
+
+      {/* CENTER LINKS */}
+      <ul className="navbar-nav mx-auto text-center mb-3 mb-lg-0">
+        <li className="nav-item"><Link className="nav-link" to="/">Home</Link></li>
+        <li className="nav-item"><Link className="nav-link" to="/service">Service</Link></li>
+        <li className="nav-item"><Link className="nav-link" to="/pricing">Pricing</Link></li>
+        <li className="nav-item"><Link className="nav-link" to="/about">About</Link></li>
+        <li className="nav-item"><Link className="nav-link" to="/contact">Contact</Link></li>
+      </ul>
+
+      {/* BUTTONS */}
+      <div className="d-flex justify-content-center gap-2 ms-lg-auto">
+        <button className="btn login-btn" onClick={() => navigate('/login')}>
+          Log in
+        </button>
+        <button className="btn signup-btn" onClick={() => navigate('/signup')}>
+          Sign up
+        </button>
+      </div>
+
+    </div>
+  </div>
+</nav>
+
+  );
 }
 
 export default Navbar;

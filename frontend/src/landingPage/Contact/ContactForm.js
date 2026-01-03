@@ -1,6 +1,42 @@
 import React from "react";
+import { useState } from "react";
+import axios from 'axios';
 
 function ContactForm() {
+  const [loading ,setLoading] = useState(false);
+  const [message,setMessage] = useState("");
+  const [formData,setformData] = useState({
+    fullname : "",
+    email : "",
+    phone : "",
+    subject : "",
+    message : ""
+  })
+
+  
+
+  const HandleChange = (e) => {
+    setformData({
+      ...formData,
+      [e.target.name] : e.target.value,
+    })
+  }
+
+  const HandleSubmit = async (e) => {
+  e.preventDefault();
+  setLoading(true);
+  setMessage("");
+
+  try {
+    await axios.post("http://localhost:8080/contact", formData);
+    setMessage("Your message has been sent!");
+  } catch (e) {
+    setMessage(e.response?.data?.message || "Something went wrong");
+  } finally {
+    setLoading(false);
+  }
+};
+
   return (
     <section className="py-5">
       <div className="container">
@@ -11,24 +47,25 @@ function ContactForm() {
             <div className="contactForm p-4 p-md-5 h-100">
               <h5 className="mb-3">Send Us a Message</h5>
 
-              <div className="mb-3">
-                <label className="form-label" htmlFor="username">Your Name *</label>
-                <input className="form-control" placeholder="John Doe" />
+              <form onSubmit={HandleSubmit}>
+                <div className="mb-3">
+                <label className="form-label"  htmlFor="fullname">Full Name *</label>
+                <input className="form-control" placeholder="John Doe" name ="fullname" value = {formData.fullname} onChange={HandleChange} required/>
               </div>
 
               <div className="mb-3">
                 <label className="form-label" htmlFor="email">Email Address *</label>
-                <input className="form-control" placeholder="john@example.com" type="email" />
+                <input className="form-control" placeholder="john@example.com" type="email" name = "email" onChange={HandleChange} value={formData.email} required/>
               </div>
 
               <div className="mb-3">
                 <label className="form-label" htmlFor="phone">Phone Number</label>
-                <input className="form-control" placeholder="+1 (555) 123-4567" />
+                <input className="form-control" placeholder="+1 (555) 123-4567" name = "phone" onChange={HandleChange} value = {formData.phone} required/>
               </div>
 
               <div className="mb-3">
                 <label className="form-label" htmlFor="subject">Subject *</label>
-                <input className="form-control" placeholder="How can we help you?" />
+                <input className="form-control" placeholder="How can we help you?" name = "subject" onChange={HandleChange} value = {formData.subject} required/>
               </div>
 
               <div className="mb-3">
@@ -37,12 +74,17 @@ function ContactForm() {
                   className="form-control"
                   rows="5"
                   placeholder="Tell us more about your inquiry..."
+                  name = "message"
+                  value = {formData.message}
+                  onChange={HandleChange}
                 />
               </div>
 
-              <button className="btn btn-primary w-100 mt-3" style={{ backgroundColor: "#2E8BC0" }}>
-                Send Message
+              <button className="btn-primary-full" disabled={loading}>
+                {loading ? "Booking":"Contact us"}
               </button>
+              {message && <p>{message}</p>}
+              </form>
             </div>
           </div>
 

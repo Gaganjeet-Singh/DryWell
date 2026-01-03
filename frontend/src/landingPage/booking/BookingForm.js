@@ -1,6 +1,45 @@
-import React from "react";
+import React, { useState } from "react";
+import axios from 'axios';
 
 function BookingForm() {
+    const [message,setmessage] = useState("");
+    const [loading,setloading] = useState(false);
+    const [formData,setformData] = useState({
+        fullname : "",
+        phone : "",
+        email : "",
+        pickupDate : "",
+        serviceType:"",
+        pickupAddress:""
+    });
+
+    const HandleChange = (e) => {
+        setformData({
+            ...formData,
+            [e.target.name] : e.target.value
+        })
+    }
+
+    const HandleSubmit = async(e) => {
+        e.preventDefault();
+        setloading(true);
+        setmessage("");
+
+        try {
+            const response = await axios.post(
+                "http://localhost:8080/booking",
+                formData
+            )
+            setmessage("Your Booking is done!");
+        } catch(e) {
+            setmessage(e.response?.data?.message || "Something went wrong");
+        } finally {
+            setloading(false);
+        }
+    }
+
+    
+    
   return (
     <section className="booking-section">
       <div className="container">
@@ -13,30 +52,30 @@ function BookingForm() {
               <p className="text-muted">
                 Fill in your information and we'll be there!
               </p>
-
+            <form onSubmit={HandleSubmit}>
               <div className="form-group">
-                <label>Full Name *</label>
-                <input className="form-control" />
+                <label htmlFor="fullname">Full Name *</label>
+                <input className="form-control" name = "fullname" value = {formData.fullname} onChange={HandleChange}/>
               </div>
 
               <div className="form-group">
-                <label>Phone Number *</label>
-                <input className="form-control" />
+                <label htmlFor="phone">Phone Number *</label>
+                <input className="form-control" name="phone" value= {formData.phone} onChange={HandleChange}/>
               </div>
 
               <div className="form-group">
-                <label>Email Address *</label>
-                <input className="form-control" type="email" />
+                <label htmlFor="email">Email Address *</label>
+                <input className="form-control" type="email" name="email" value = {formData.email} onChange={HandleChange}/>
               </div>
 
               <div className="form-group">
-                <label>Pickup Date *</label>
-                <input className="form-control" type="date" />
+                <label htmlFor="pickupDate">Pickup Date *</label>
+                <input className="form-control" type="date" name= "pickupDate" value = {formData.pickupDate} onChange={HandleChange}/>
               </div>
 
               <div className="form-group">
-                <label>Service Type *</label>
-                <select className="form-select">
+                <label htmlFor = "serviceType">Service Type *</label>
+                <select className="form-select" name= "serviceType" value = {formData.serviceType} onChange={HandleChange}>
                   <option>Select service</option>
                   <option>Wash & Fold</option>
                   <option>Dry Cleaning</option>
@@ -45,14 +84,17 @@ function BookingForm() {
               </div>
 
               <div className="form-group">
-                <label>Pickup Address *</label>
-                <textarea className="form-control" rows="4" />
+                <label htmlFor="pickupAddress">Pickup Address *</label>
+                <textarea className="form-control" rows="4" name ="pickupAddress" value = {formData.pickupAddress} onChange={HandleChange}/>
               </div>
 
-              <button className="btn-primary-full">
-                Send Message
+              <button className="btn-primary-full" disabled={loading}>
+                {loading ? "Booking":"Schedule Pickup"}
               </button>
+              {message && <p>{message}</p>}
+              </form>
             </div>
+            
           </div>
 
           {/* RIGHT – INFO */}
