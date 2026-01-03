@@ -784,3 +784,26 @@ code {
   }
 }
 
+.signup-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.form-control {
+  height: 45px;
+  border-radius: 8px;
+}
+
+.signup-btn {
+  background-color: #2E8BC0;
+  border: none;
+  height: 45px;
+  border-radius: 25px;
+  font-weight: 500;
+}
+
+.signup-btn:hover {
+  background-color: #1c6fa1;
+}
+
