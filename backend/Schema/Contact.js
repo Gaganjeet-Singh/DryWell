@@ -1,7 +1,7 @@
 const {Schema} = require('mongoose');
 
 const ContactSchema = new Schema({
-    name : {
+    fullname : {
         type: String,
         required:true
     },
