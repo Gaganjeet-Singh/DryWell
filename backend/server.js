@@ -11,8 +11,8 @@ const { Contact } = require("./models/Contact");
 const app = express();
 
 const allowedOrigins = [
-  "https://dry-well.vercel.app/",
-  "http://localhost:3000"
+  "https://dry-well.vercel.app",
+  
 ];
 
 /* ================== MIDDLEWARE (ORDER MATTERS) ================== */
