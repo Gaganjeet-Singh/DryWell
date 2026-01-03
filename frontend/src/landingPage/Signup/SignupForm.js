@@ -3,6 +3,7 @@ import Navbar from '../Navbar';
 import Footer from '../Footer';
 import { Link, Navigate } from 'react-router-dom';
 import axios from 'axios';
+import api from "../api/axios";
 import { ToastContainer, toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
 
