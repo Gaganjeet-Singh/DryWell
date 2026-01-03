@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import axios from 'axios';
+import api from "../api/axios";
 
 function ContactForm() {
   const [loading ,setLoading] = useState(false);
@@ -28,7 +29,7 @@ function ContactForm() {
   setMessage("");
 
   try {
-    await axios.post("http://localhost:8080/contact", formData);
+    await api.post("/contact", formData);
     setMessage("Your message has been sent!");
   } catch (e) {
     setMessage(e.response?.data?.message || "Something went wrong");

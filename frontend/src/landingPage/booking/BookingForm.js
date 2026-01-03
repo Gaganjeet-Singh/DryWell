@@ -26,8 +26,8 @@ function BookingForm() {
         setmessage("");
 
         try {
-            const response = await axios.post(
-                "http://localhost:8080/booking",
+            const response = await api.post(
+                "/booking",
                 formData
             )
             setmessage("Your Booking is done!");

@@ -23,21 +23,23 @@ function SignupForm() {
 
   const HandleError = (err) => 
     toast.error(err,{
-        position : "top-center"
+        position : "top-center",
+        autoClose: 5000,
     });
   
 
   const HandleSuccess = (msg) => 
     toast.success(msg, {
-        position:"top-center"
+        position:"top-center",
+        autoClose: 5000,
     });
   
     const HandleSubmit = async (e) => {
   e.preventDefault();
 
   try {
-    const res = await axios.post(
-      "http://localhost:8080/signin",
+    const res = await api.post(
+      "/signin",
       formData,
       { withCredentials: true }
     );
