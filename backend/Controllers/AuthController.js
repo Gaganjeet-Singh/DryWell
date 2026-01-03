@@ -18,7 +18,8 @@ module.exports.signin = async (req, res) => {
 
     res.cookie("token", token, {
         httpOnly: true,
-        sameSite: "lax"
+        secure : true,
+        samSite: "none"
     });
 
 

@@ -10,6 +10,11 @@ const { Contact } = require("./models/Contact");
 
 const app = express();
 
+const allowedOrigins = [
+  "https://dry-well.vercel.app/",
+  "http://localhost:3000"
+];
+
 /* ================== MIDDLEWARE (ORDER MATTERS) ================== */
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -17,7 +22,7 @@ app.use(cookieParser());
 
 app.use(
   cors({
-    origin: "http://localhost:3000",
+    origin: allowedOrigins,
     credentials: true
   })
 );
