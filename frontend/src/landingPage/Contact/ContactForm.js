@@ -1,7 +1,8 @@
 import React from "react";
 import { useState } from "react";
-import axios from 'axios';
-import api from "../api/axios";
+
+import api from "../../api/axios";
+
 
 function ContactForm() {
   const [loading ,setLoading] = useState(false);

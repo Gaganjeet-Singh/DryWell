@@ -2,8 +2,9 @@ import React, { useState } from 'react';
 import Navbar from '../Navbar';
 import Footer from '../Footer';
 import { Link, Navigate } from 'react-router-dom';
-import axios from 'axios';
-import api from "../api/axios";
+
+import api from "../../api/axios";
+
 import { ToastContainer, toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
 
@@ -41,8 +42,7 @@ function SignupForm() {
   try {
     const res = await api.post(
       "/signin",
-      formData,
-      { withCredentials: true }
+      formData
     );
 
     const { message, success } = res.data;
